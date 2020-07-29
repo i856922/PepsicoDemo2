@@ -1,0 +1,19 @@
+ID: PEPSICOKE
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: PEPSICODBKEV
+   type: hdb
+   path: PEPSICODBKEV
+   requires:
+    - name: hdi_PEPSICODBKEV
+
+resources:
+ - name: hdi_PEPSICODBKEV
+   parameters:
+      config:
+         schema: PEPSICOKEVIN
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
